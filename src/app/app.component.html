@@ -1,2 +1,17 @@
 <h1>TODO Fun With Angular</h1>
-
+<div>
+  <p>Enter Todo in to text field.</p>
+  <label>TODO</label>
+  <br>
+  <input type=text [(ngModel)]="todo">
+  <br>
+  <button (click)="onAddTodo()">Add Todo</button>
+</div>
+<div>
+  <h3>Current todos</h3>
+  <p *ngFor="let todo of todos">
+    {{ todo }} 
+    <br>
+    <button (click)="onDeleteTodo($event)">Delete</button>
+  </p>
+</div>
