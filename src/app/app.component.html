@@ -5,7 +5,11 @@
   <br>
   <input type=text [(ngModel)]="todo">
   <br>
-  <button (click)="onAddTodo()">Add Todo</button>
+  <button 
+    (click)="onAddTodo()"
+    [disabled]="!todo.length">
+    Add Todo
+  </button>
 </div>
 <div>
   <h3>Current todos</h3>

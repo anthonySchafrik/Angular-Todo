@@ -14,14 +14,14 @@ export class AppComponent {
 
     todos.push(todo);
 
-    this.todo = ''
+    this.todo = '';
   }
 
   onDeleteTodo(e) {
     const { todos } = this;
- 
-    let todo:string = e.target.parentElement.childNodes[0].data.toString().trim();
-    let item = todos.indexOf(todo);
+
+    const todo: string = e.target.parentElement.childNodes[0].data.toString().trim();
+    const item = todos.indexOf(todo);
 
     todos.splice(item, 1);
   }
